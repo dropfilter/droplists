@@ -43,6 +43,7 @@ export const createPages: GatsbyNode["createPages"] = async ({ graphql, actions 
             totalCount: result.data["allFile"].totalCount,
             id: page.id
         },
+        defer: true,
         })
     )
 

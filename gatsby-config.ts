@@ -18,8 +18,13 @@ const config: GatsbyConfig = {
         `gatsby-transformer-plaintext`,
         `gatsby-plugin-react-helmet`,
         `gatsby-plugin-postcss`,
-        `gatsby-plugin-netlify`,
-        `gatsby-plugin-sitemap`
+        {
+            resolve: `gatsby-plugin-netlify`,
+            options: {
+                mergeLinkHeaders: true,
+                mergeCachingHeaders: true,
+            }
+        }
     ]
 }
 
